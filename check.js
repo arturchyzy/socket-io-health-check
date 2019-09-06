@@ -1,7 +1,16 @@
 const io = require('socket.io-client');
+const yargs = require('yargs');
 
-
-const argv = require('minimist')(process.argv.slice(2), {string: 'url', alias: {u: 'url'}});
+const argv = yargs
+  .option('url', {
+    alias: 'u',
+    description: 'Url to connect to',
+    type: 'string',
+    required: true,
+  })
+  .help()
+  .alias('help', 'h')
+  .argv;
 
 console.log(`Checking connection using url ${argv.url}`);
 const socket = io(`${argv.url}/chat`, { forceNew: true });

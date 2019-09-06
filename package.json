@@ -2,10 +2,16 @@
   "name": "socket-io-health-check",
   "version": "1.0.0",
   "scripts": {
-    "start": "node check.js"
+    "start": "node check.js",
+    "build": "npx webpack"
   },
   "dependencies": {
     "socket.io-client": "^2.2.0",
-    "minimist": "^1.2.0"
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-node-externals": "^1.7.2"
   }
 }
