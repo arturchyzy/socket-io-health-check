@@ -1,0 +1,11 @@
+{
+  "name": "socket-io-health-check",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node check.js"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.2.0",
+    "minimist": "^1.2.0"
+  }
+}
